@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".crear_producto">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/barra_arriba"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/barra_de_arribarecurso"
+        android:backgroundTint="@color/secundario_app"
+        android:elevation="7dp"
+        android:tint="@color/secundario_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="2" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/kiero_mas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/barra_arriba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kiero_mas" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/Atras"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="8dp"
+        android:alpha="0.8"
+        android:onClick="Atras"
+        android:elevation="8dp"
+        android:tint="@color/Blanco"
+        app:layout_constraintBottom_toBottomOf="@+id/barra_arriba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/regresa" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/Ayuda"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="8dp"
+        android:alpha="0.8"
+        android:elevation="8dp"
+        android:tint="@color/Blanco"
+        app:layout_constraintBottom_toBottomOf="@+id/barra_arriba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/signo_de_interrogacion" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/fondo_gris_azulado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="75dp"
+                android:layout_marginBottom="-30dp"
+                app:cardBackgroundColor="@color/blanco_grisaceo_fondo"
+                app:cardCornerRadius="16dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="Imagen"
+                    android:textSize="20sp" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/blanco_grisaceo_fondo"
+                app:cardCornerRadius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:adjustViewBounds="true"
+                        android:elevation="5dp"
+                        android:foreground="@drawable/redondeo_forzado"
+                        android:foregroundTint="@color/blanco_grisaceo_fondo"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView43"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/svg_top"
+                        app:srcCompat="@drawable/sin_foto" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imageView10"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_weight="1"
+                                android:onClick="select_icon"
+                                android:tint="#676767"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+                                app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                                app:layout_constraintHeight_percent="0.1"
+                                app:layout_constraintHorizontal_bias="0.065"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/imageView9"
+                                app:srcCompat="@drawable/ic_baseline_pageview_24" />
+
+                            <TextView
+                                android:id="@+id/textView105"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Recursos" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+
+                                android:id="@+id/imageView24"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_weight="1"
+                                android:onClick="select_photo"
+                                android:tint="#676767"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+                                app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                                app:layout_constraintHeight_percent="0.1"
+                                app:layout_constraintHorizontal_bias="0.065"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/imageView9"
+                                app:srcCompat="@drawable/galeria" />
+
+                            <TextView
+                                android:id="@+id/textView106"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Galería" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imageView11"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_weight="1"
+                                android:onClick="hacerFoto"
+                                android:tint="#676767"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.1"
+                                app:layout_constraintHorizontal_bias="0.065"
+                                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                                app:layout_constraintTop_toTopOf="@+id/imageView9"
+                                app:srcCompat="@drawable/camara" />
+
+                            <TextView
+                                android:id="@+id/textView107"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Nueva Foto" />
+                        </LinearLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="-30dp"
+                app:cardBackgroundColor="@color/blanco_grisaceo_fondo"
+                app:cardCornerRadius="16dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="Información"
+                    android:textSize="20sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardBackgroundColor="@color/blanco_grisaceo_fondo"
+                app:cardCornerRadius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="16dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/nombreProducto"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Nombre del producto"
+                                app:boxCornerRadiusBottomEnd="0dp"
+                                app:boxCornerRadiusBottomStart="0dp"
+                                app:boxCornerRadiusTopEnd="16dp"
+                                app:boxCornerRadiusTopStart="16dp"
+                                app:startIconDrawable="@drawable/editar">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textShortMessage" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="16dp"
+                        app:cardBackgroundColor="@color/Gris"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/descripcionProducto"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Descripción"
+                                app:boxCornerRadiusBottomEnd="0dp"
+                                app:boxCornerRadiusBottomStart="0dp"
+                                app:boxCornerRadiusTopEnd="16dp"
+                                app:boxCornerRadiusTopStart="16dp"
+                                app:startIconDrawable="@drawable/product_description">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textMultiLine" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="16dp"
+                        app:cardCornerRadius="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@color/Gris"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/precioProducto"
+                                style="@android:style/TextAppearance.Large"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:hint="Precio"
+                                app:boxCornerRadiusBottomEnd="0dp"
+                                app:boxCornerRadiusBottomStart="0dp"
+                                app:boxCornerRadiusTopEnd="16dp"
+                                app:boxCornerRadiusTopStart="16dp"
+                                app:startIconDrawable="@drawable/etiqueta">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+
+                                    android:inputType="numberDecimal"
+                                    android:textSize="18sp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/textView9"
+                                android:layout_width="30dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="-30dp"
+                                android:fontFamily="@font/nunito_bold"
+                                android:foregroundGravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:text="€"
+                                android:textSize="36sp" />
+
+                            <ToggleButton
+                                android:id="@+id/toggleButton"
+                                android:layout_width="130dp"
+                                android:layout_height="73dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="-5dp"
+                                android:layout_marginEnd="-5dp"
+                                android:fontFamily="@font/nunito_bold"
+                                android:gravity="center|center_vertical"
+                                android:textAllCaps="false"
+                                android:textOff="la Unidad"
+                                android:textOn="el Kilo"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button9"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_margin="16dp"
+                        android:backgroundTint="@color/Gris"
+                        android:gravity="center"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:onClick="categorias_producto"
+                        android:text="Categoría"
+                        android:textAllCaps="false"
+                        android:textColor="@color/common_google_signin_btn_text_light"
+                        app:cornerRadius="16dp"
+                        app:icon="@drawable/ic_baseline_category_24"
+                        app:iconGravity="start"
+                        app:iconPadding="0dp"
+                        app:iconTint="#676767" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_margin="16dp"
+                        app:cardBackgroundColor="@color/Gris"
+                        app:cardCornerRadius="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="4dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/comida_en_mesa" />
+
+                                <CheckBox
+                                    android:id="@+id/servicioMesa"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:checked="true"
+                                    android:text="Local"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent"
+                                android:alpha="0.5"
+                                android:background="#505050"
+                                android:orientation="horizontal"></LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="4dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/comida_para_llevar" />
+
+                                <CheckBox
+                                    android:id="@+id/recogidaLocal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:checked="true"
+                                    android:text="Recogida"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent"
+                                android:alpha="0.5"
+                                android:background="#505050"
+                                android:orientation="horizontal"></LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="4dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    app:srcCompat="@drawable/entrega_de_comida" />
+
+                                <CheckBox
+                                    android:id="@+id/repartoDomicilio"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:checked="true"
+                                    android:text="Domicilio"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="-30dp"
+                app:cardBackgroundColor="@color/blanco_grisaceo_fondo"
+                app:cardCornerRadius="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="Detalles"
+                    android:textSize="20sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                app:cardBackgroundColor="@color/blanco_grisaceo_fondo"
+                app:cardCornerRadius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button8"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:alpha="0.9"
+                        android:backgroundTint="@color/Gris"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:onClick="intolerancias"
+                        android:text="Intolerancias"
+                        android:textAllCaps="false"
+                        android:textColor="@color/common_google_signin_btn_text_light"
+                        app:cornerRadius="16dp"
+                        app:icon="@drawable/gluten_free"
+                        app:iconGravity="start"
+                        app:iconPadding="0dp"
+                        app:iconTint="#676767" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button6"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:alpha="0.9"
+                        android:backgroundTint="@color/Gris"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:onClick="ingredientes_seleccionables"
+                        android:text="Ingredientes Seleccionables"
+                        android:textAllCaps="false"
+                        android:textColor="@color/common_google_signin_btn_text_light"
+                        app:cornerRadius="16dp"
+                        app:icon="@drawable/select"
+                        app:iconGravity="start"
+                        app:iconPadding="0dp"
+                        app:iconTint="#676767" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button7"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:alpha="0.9"
+                        android:backgroundTint="@color/Gris"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:onClick="ingrediente_anadible"
+                        android:text="Ingredientes Añadibles"
+                        android:textAllCaps="false"
+                        android:textColor="@color/common_google_signin_btn_text_light"
+                        app:cornerRadius="16dp"
+                        app:icon="@drawable/anadir"
+                        app:iconGravity="start"
+                        app:iconPadding="0dp"
+                        app:iconTint="#676767" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button5"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:alpha="0.9"
+                        android:backgroundTint="@color/Gris"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:onClick="ingrediente_retirable"
+                        android:text="Ingredientes Retirables"
+                        android:textAllCaps="false"
+                        android:textColor="@color/common_google_signin_btn_text_light"
+                        app:cornerRadius="16dp"
+                        app:icon="@drawable/menos"
+                        app:iconGravity="start"
+                        app:iconPadding="0dp"
+                        app:iconTint="#676767" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="-30dp"
+                app:cardBackgroundColor="@color/blanco_grisaceo_fondo"
+                app:cardCornerRadius="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="Confirmación"
+                    android:textSize="20sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
+                app:cardBackgroundColor="@color/blanco_grisaceo_fondo"
+                app:cardCornerRadius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/vista_previa_producto"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_margin="16dp"
+                        android:alpha="0.9"
+                        android:backgroundTint="#b7cbf8"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:onClick="vistaPrevia"
+                        android:text="Vista Previa"
+                        android:textAllCaps="false"
+                        android:textColor="@color/common_google_signin_btn_text_light"
+                        app:cornerRadius="16dp"
+                        app:icon="@drawable/ojo"
+                        app:iconGravity="start"
+                        app:iconPadding="0dp"
+                        app:iconTint="@color/zxing_custom_result_view" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/confirmar_producto"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:alpha="0.9"
+                        android:backgroundTint="#CAF8B7"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:onClick="generar_producto"
+                        android:text="Generar Producto"
+                        android:textAllCaps="false"
+                        android:textColor="@color/common_google_signin_btn_text_light"
+                        app:cornerRadius="16dp"
+                        app:icon="@drawable/marca_de_verificacion"
+                        app:iconGravity="start"
+                        app:iconPadding="0dp"
+                        app:iconTint="@color/zxing_custom_result_view" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

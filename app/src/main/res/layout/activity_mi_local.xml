@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c7cdd9"
+    tools:context=".mi_local">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/barra_arriba"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/barra_de_arribarecurso"
+        android:backgroundTint="@color/secundario_app"
+        android:elevation="7dp"
+        android:tint="@color/secundario_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="2" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/kiero_mas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/barra_arriba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kiero_mas" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/Atras"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="8dp"
+        android:alpha="0.8"
+        android:elevation="8dp"
+        android:onClick="Atras"
+        android:tint="@color/Blanco"
+        app:layout_constraintBottom_toBottomOf="@+id/barra_arriba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/regresa" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/Ayuda"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="8dp"
+        android:alpha="0.8"
+        android:elevation="8dp"
+        android:tint="@color/Blanco"
+        app:layout_constraintBottom_toBottomOf="@+id/barra_arriba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/signo_de_interrogacion" />
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="-30dp"
+                app:cardBackgroundColor="@color/blanco_grisaceo_fondo"
+                app:cardCornerRadius="16dp">
+
+                <TextView
+                    android:id="@+id/mi_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="Mi Logotipo"
+                    android:textSize="20sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/blanco_grisaceo_fondo"
+                app:cardCornerRadius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/localImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:adjustViewBounds="true"
+                        android:baselineAligned="false"
+                        android:elevation="5dp"
+                        android:foreground="@drawable/redondeo_forzado"
+                        android:foregroundTint="@color/blanco_grisaceo_fondo"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView43"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/svg_top"
+                        app:srcCompat="@drawable/sin_foto" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imageView10"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_weight="1"
+                                android:alpha="0.8"
+                                android:onClick="select_icon"
+                                android:tint="@color/secundario_app"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+                                app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                                app:layout_constraintHeight_percent="0.1"
+                                app:layout_constraintHorizontal_bias="0.065"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/imageView9"
+                                app:srcCompat="@drawable/ic_baseline_pageview_24" />
+
+                            <TextView
+                                android:id="@+id/textView105"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Recursos" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:onClick="select_photo"
+                            android:orientation="vertical">
+
+                            <ImageView
+
+                                android:id="@+id/imageView24"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_weight="1"
+                                android:alpha="0.8"
+                                android:tint="@color/secundario_app"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+                                app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                                app:layout_constraintHeight_percent="0.1"
+                                app:layout_constraintHorizontal_bias="0.065"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/imageView9"
+                                app:srcCompat="@drawable/galeria" />
+
+                            <TextView
+                                android:id="@+id/textView106"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Galería" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:onClick="hacerFoto"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imageView11"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_weight="1"
+                                android:alpha="0.8"
+                                android:tint="@color/secundario_app"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.1"
+                                app:layout_constraintHorizontal_bias="0.065"
+                                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                                app:layout_constraintTop_toTopOf="@+id/imageView9"
+                                app:srcCompat="@drawable/camara" />
+
+                            <TextView
+                                android:id="@+id/textView107"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Nueva Foto" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="-30dp"
+                app:cardBackgroundColor="@color/blanco_grisaceo_fondo"
+                app:cardCornerRadius="16dp">
+
+                <TextView
+                    android:id="@+id/mi_geo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="Mi Información"
+                    android:textSize="20sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/blanco_grisaceo_fondo"
+                app:cardCornerRadius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/outlinedTextField"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Nombre del Local"
+                        app:boxBackgroundColor="@color/blanco_grisaceo_fondo">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_baseline_storefront_24"
+                            android:inputType="textShortMessage" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/outlinedTextField"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint='"Sobre Nosotros"'
+                        app:boxBackgroundColor="@color/blanco_grisaceo_fondo">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_baseline_supervisor_account_24"
+                            android:inputType="textMultiLine" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/outlinedTextField"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Teléfono"
+                        app:boxBackgroundColor="@color/blanco_grisaceo_fondo">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_baseline_local_phone_24"
+                            android:inputType="textShortMessage" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="-30dp"
+                app:cardBackgroundColor="@color/blanco_grisaceo_fondo"
+                app:cardCornerRadius="16dp">
+
+                <TextView
+                    android:id="@+id/mi_geo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="Mi Localización"
+                    android:textSize="20sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/blanco_grisaceo_fondo"
+                app:cardCornerRadius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/mapa_geo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:adjustViewBounds="true"
+                        android:elevation="5dp"
+                        android:foreground="@drawable/redondeo_forzado"
+                        android:foregroundTint="@color/blanco_grisaceo_fondo"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView43"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/svg_top"
+                        app:srcCompat="@drawable/mapa_ejemplo" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/eliminar_ubicación"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_weight="1"
+                                android:alpha="0.8"
+                                android:tint="@color/secundario_app"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+                                app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                                app:layout_constraintHeight_percent="0.1"
+                                app:layout_constraintHorizontal_bias="0.065"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/imageView9"
+                                app:srcCompat="@drawable/eliminar_ubicacion_gps" />
+
+                            <TextView
+                                android:id="@+id/eliminar_gps"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Eliminar" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+
+                                android:id="@+id/mejorar_precisión"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_weight="1"
+                                android:alpha="0.8"
+                                android:tint="@color/secundario_app"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+                                app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                                app:layout_constraintHeight_percent="0.1"
+                                app:layout_constraintHorizontal_bias="0.065"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/imageView9"
+                                app:srcCompat="@drawable/ubicacion_gps" />
+
+                            <TextView
+                                android:id="@+id/mejorar_precision"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Mejorar Precisión" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/geolocalizar"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_weight="1"
+                                android:alpha="0.8"
+                                android:tint="@color/secundario_app"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.1"
+                                app:layout_constraintHorizontal_bias="0.065"
+                                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                                app:layout_constraintTop_toTopOf="@+id/imageView9"
+                                app:srcCompat="@drawable/brujula_gps" />
+
+                            <TextView
+                                android:id="@+id/geolocalizar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Geolocalízate" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="-30dp"
+                app:cardBackgroundColor="@color/blanco_grisaceo_fondo"
+                app:cardCornerRadius="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:text="Confirmación"
+                    android:textSize="20sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
+                app:cardBackgroundColor="@color/blanco_grisaceo_fondo"
+                app:cardCornerRadius="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/vista_previa_producto"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_margin="16dp"
+                        android:alpha="0.9"
+                        android:backgroundTint="#b7cbf8"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:onClick="vistaPrevia"
+                        android:text="Vista Previa"
+                        android:textAllCaps="false"
+                        android:textColor="@color/common_google_signin_btn_text_light"
+                        app:cornerRadius="16dp"
+                        app:icon="@drawable/ojo"
+                        app:iconGravity="start"
+                        app:iconPadding="0dp"
+                        app:iconTint="@color/zxing_custom_result_view" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/confirmar_producto"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:alpha="0.9"
+                        android:backgroundTint="#CAF8B7"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:onClick="guardarCambios"
+                        android:text="Guardar Cambios"
+                        android:textAllCaps="false"
+                        android:textColor="@color/common_google_signin_btn_text_light"
+                        app:cornerRadius="16dp"
+                        app:icon="@drawable/marca_de_verificacion"
+                        app:iconGravity="start"
+                        app:iconPadding="0dp"
+                        app:iconTint="@color/zxing_custom_result_view" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

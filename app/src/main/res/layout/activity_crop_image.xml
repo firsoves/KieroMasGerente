@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c7cdd9"
+    tools:context=".crop_image">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/barra_arriba"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/barra_de_arribarecurso"
+        android:backgroundTint="@color/secundario_app"
+        android:elevation="7dp"
+        android:tint="@color/secundario_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="2" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/kiero_mas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/barra_arriba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kiero_mas" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/Atras"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="8dp"
+        android:alpha="0.8"
+        android:onClick="Atras"
+        android:elevation="8dp"
+        android:tint="@color/Blanco"
+        app:layout_constraintBottom_toBottomOf="@+id/barra_arriba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/regresa" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/Ayuda"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="8dp"
+        android:alpha="0.8"
+        android:elevation="8dp"
+        android:tint="@color/Blanco"
+        app:layout_constraintBottom_toBottomOf="@+id/barra_arriba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/signo_de_interrogacion" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barra_arriba">
+
+        <com.theartofdev.edmodo.cropper.CropImageView
+            android:id="@+id/cropImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#c7cdd9"
+            app:barrierMargin="50dp"
+            app:cropBackgroundColor="#80c7cdd9"
+            app:cropGuidelinesColor="@color/cardview_shadow_start_color">
+
+        </com.theartofdev.edmodo.cropper.CropImageView>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button58"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#b7cbf8"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:onClick="flipImage"
+                    android:text="Voltear"
+                    android:textColor="@color/common_google_signin_btn_text_light"
+                    app:cornerRadius="16dp"
+                    app:icon="@drawable/dar_la_vuelta"
+                    app:iconTint="@color/zxing_custom_result_view"
+                    app:layout_constraintHeight_percent="0.07"
+                    app:layout_constraintWidth_percent="0.4" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rotateImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#b7cbf8"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:onClick="rotateImage"
+                    android:text="Rotar"
+                    android:textColor="@color/common_google_signin_btn_text_light"
+                    app:cornerRadius="16dp"
+                    app:icon="@drawable/ic_baseline_rotate_right_24"
+                    app:iconTint="@color/zxing_custom_result_view"
+                    app:layout_constraintHeight_percent="0.07"
+                    app:layout_constraintWidth_percent="0.4" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/confirmar_cambios2"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:alpha="0.9"
+                android:backgroundTint="#CAF8B7"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:onClick="acceptCrop"
+                android:text="Confirmar Imagen"
+                android:textAllCaps="false"
+                android:textColor="@color/common_google_signin_btn_text_light"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/marca_de_verificacion"
+                app:iconGravity="start"
+                app:iconPadding="0dp"
+                app:iconTint="@color/zxing_custom_result_view" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

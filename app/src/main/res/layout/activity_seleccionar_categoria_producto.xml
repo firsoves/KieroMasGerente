@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco_grisaceo_fondo"
+    tools:context=".SeleccionarCategoriaProducto">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/svg_top8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/barra_de_arribarecurso"
+        android:backgroundTint="@color/secundario_app"
+        android:elevation="7dp"
+        android:tint="@color/secundario_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/imageView97"
+        android:layout_width="32dp"
+        android:layout_height="0dp"
+        android:elevation="11dp"
+        android:tint="@color/secundario_app"
+        app:layout_constraintBottom_toBottomOf="@+id/svg_top8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_notifications_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageView118"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:elevation="11dp"
+        android:tint="@color/secundario_app"
+        app:layout_constraintBottom_toBottomOf="@+id/svg_top8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_pages_24" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/kiero_mas24"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/svg_top8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kiero_mas" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/degradado"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/degradado" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Seleccione las Categorías"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/svg_top8" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/botonConfirmar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#CEFFBB"
+        android:onClick="confirmar_categorias"
+        android:paddingLeft="24dp"
+        android:paddingTop="6dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="6dp"
+        android:text="Confirmar"
+        android:textAllCaps="false"
+        android:textColor="@color/common_google_signin_btn_text_light_focused"
+        android:textSize="25sp"
+        app:cornerRadius="16dp"
+        app:icon="@drawable/check"
+        app:iconTint="@color/common_google_signin_btn_text_light_focused"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/degradado">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="@color/Blanco"
+                app:cardCornerRadius="16dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/nombre_categoria1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Entrantes"
+                    android:textSize="30sp" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/categoria_seleccionada1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textSize="24sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="@color/Blanco"
+                app:cardCornerRadius="16dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/nombre_categoria2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Raciones"
+                    android:textSize="30sp" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/categoria_seleccionada2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textSize="24sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="@color/Blanco"
+                app:cardCornerRadius="16dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/nombre_categoria3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Ensaladas"
+                    android:textSize="30sp" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/categoria_seleccionada3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textSize="24sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="@color/Blanco"
+                app:cardCornerRadius="16dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/nombre_categoria4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Carnes"
+                    android:textSize="30sp" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/categoria_seleccionada4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textSize="24sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="@color/Blanco"
+                app:cardCornerRadius="16dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/nombre_categoria5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Pescados"
+                    android:textSize="30sp" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/categoria_seleccionada5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textSize="24sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="@color/Blanco"
+                app:cardCornerRadius="16dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/nombre_categoria6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Algo Dulce"
+                    android:textSize="30sp" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/categoria_seleccionada6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:textSize="24sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="@color/Blanco"
+                app:cardCornerRadius="16dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/nombre_categoria7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Bebidas"
+                    android:textSize="30sp" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/categoria_seleccionada7"
+                    android:layout_width="406dp"
+                    android:layout_height="58dp"
+                    android:layout_marginStart="5dp"
+                    android:textSize="24sp" />
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

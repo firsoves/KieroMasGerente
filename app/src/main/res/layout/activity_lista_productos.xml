@@ -1,0 +1,1550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_gris_azulado"
+    tools:context=".lista_productos">
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/barra_arriba"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/barra_de_arribarecurso"
+        android:backgroundTint="@color/secundario_app"
+        android:elevation="7dp"
+        android:tint="@color/secundario_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="2" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/kiero_mas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/barra_arriba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kiero_mas" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/Atras"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="8dp"
+        android:alpha="0.8"
+        android:onClick="Atras"
+        android:elevation="8dp"
+        android:tint="@color/Blanco"
+        app:layout_constraintBottom_toBottomOf="@+id/barra_arriba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/regresa" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/Ayuda"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="8dp"
+        android:alpha="0.8"
+        android:elevation="8dp"
+        android:tint="@color/Blanco"
+        app:layout_constraintBottom_toBottomOf="@+id/barra_arriba"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/signo_de_interrogacion" />
+
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="false"
+        android:fillViewport="false"
+        android:focusable="auto"
+        android:focusableInTouchMode="true"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:scrollbars="none"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barra_arriba">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbarStyle="outsideOverlay">
+
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.9"
+                android:background="@color/secundario_app"
+                android:foregroundGravity="center"
+                app:checkedChip="@id/chip3"
+                app:chipSpacingHorizontal="18dp"
+                app:singleLine="true"
+                app:singleSelection="true"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="83dp">
+
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip3"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TODO"
+                    app:chipBackgroundColor="@color/principal_app"
+                    app:layout_constraintBottom_toTopOf="@+id/chip5"
+                    app:layout_constraintStart_toStartOf="@+id/guidelinevertical"
+                    app:layout_constraintTop_toBottomOf="@+id/chip2"
+                    app:singleSelection="true" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip12"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Menú" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip13"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Entrantes" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip16"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Patatas" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip14"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ensaladas" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip15"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hamburguesas" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip17"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bocadillos" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip18"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Postres" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip19"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bebidas" />
+            </com.google.android.material.chip.ChipGroup>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view"
+        class="androidx.appcompat.widget.Toolbar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/Blanco"
+        android:elevation="10dp"
+        app:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView102"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/circulo"
+        android:backgroundTint="@color/principal_app"
+        android:elevation="10dp"
+        android:onClick="barra_button_menu"
+        android:outlineSpotShadowColor="@color/principal_app"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.985" />
+
+    <ImageView
+        android:id="@+id/imageView103"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        android:tint="@color/secundario_app"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView102"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView102"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/icon_pedido" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView104"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        android:onClick="menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView102"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintWidth_percent="0.08"
+        app:srcCompat="@drawable/ic_baseline_list_alt_24" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView105"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        android:onClick="barra_button_tickets"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView102"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintWidth_percent="0.08"
+        app:srcCompat="@drawable/camion_de_reparto" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fadeScrollbars="true"
+        android:fadingEdge="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="16dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/outlinedTextField"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Buscar...">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textShortMessage" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewPlatos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="3dp"
+                    app:cardMaxElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:cardCornerRadius="18dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:id="@+id/linear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="128dp"
+                                    android:layout_height="96dp"
+                                    android:layout_margin="3dp"
+                                    android:layout_marginLeft="5dp"
+                                    app:cardCornerRadius="16dp">
+
+                                    <ImageView
+                                        android:id="@+id/imageViewFotoPlato"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/imagen_ejemplo_ratio_3_4"
+                                        android:scaleType="fitXY" />
+                                </androidx.cardview.widget.CardView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:paddingLeft="5dp"
+                                        android:paddingEnd="0dp"
+                                        android:paddingRight="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="3"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/textViewNombrePlato"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentStart="true"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_marginStart="0dp"
+                                                android:layout_marginTop="5dp"
+                                                android:layout_marginEnd="0dp"
+                                                android:fontFamily="@font/nunito"
+                                                android:gravity="start"
+                                                android:maxLength="30"
+                                                android:maxLines="2"
+                                                android:text="Ejemplo de nombre "
+                                                android:textSize="18sp"
+                                                android:textStyle="bold" />
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/textViewNombrePlato"
+                                                android:layout_alignParentBottom="true"
+                                                android:layout_marginBottom="5dp"
+                                                android:paddingLeft="5dp"
+                                                android:paddingEnd="5dp"
+                                                android:paddingRight="5dp">
+
+                                                <com.google.android.material.textview.MaterialTextView
+                                                    android:id="@+id/textViewPrecioNormal"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentBottom="true"
+                                                    android:layout_marginBottom="0dp"
+                                                    android:fontFamily="@font/nunito"
+                                                    android:text="00,00€"
+                                                    android:textColor="@android:color/holo_red_dark"
+                                                    android:textSize="24sp" />
+
+                                                <ImageView
+                                                    android:id="@+id/imageViewLineaTachada"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignTop="@+id/textViewPrecioNormal"
+                                                    android:layout_alignEnd="@+id/textViewPrecioNormal"
+                                                    app:srcCompat="@drawable/linea_tachada" />
+
+                                                <TextView
+                                                    android:id="@+id/textViewPrecioOferta"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignTop="@+id/textViewPrecioNormal"
+                                                    android:layout_alignParentRight="true"
+                                                    android:layout_alignParentBottom="true"
+                                                    android:layout_marginStart="10dp"
+                                                    android:layout_marginTop="-5dp"
+                                                    android:layout_marginBottom="0dp"
+                                                    android:layout_toEndOf="@+id/textViewPrecioNormal"
+                                                    android:fontFamily="@font/nunito"
+                                                    android:text="00,00€"
+                                                    android:textColor="@android:color/holo_red_dark"
+                                                    android:textSize="15sp"
+                                                    app:autoSizeTextType="uniform" />
+                                            </RelativeLayout>
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.7"
+                                            android:gravity="center_vertical">
+
+                                            <ImageView
+                                                android:id="@+id/imageViewMas"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:alpha="0.2"
+                                                android:tint="@color/secundario_app"
+                                                app:srcCompat="@drawable/circulo" />
+
+                                            <ImageView
+                                                android:id="@+id/imageViewMas2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignBottom="@+id/imageViewMas"
+                                                android:layout_alignParentStart="true"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_marginStart="0dp"
+                                                android:layout_marginEnd="0dp"
+                                                android:layout_marginBottom="0dp"
+                                                app:srcCompat="@drawable/ic_baseline_settings_24" />
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
+
+                        <!--Colocar aquí nuevos items-->
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewPlatos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="3dp"
+                    app:cardMaxElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:cardCornerRadius="18dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:id="@+id/linear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="128dp"
+                                    android:layout_height="96dp"
+                                    android:layout_margin="3dp"
+                                    android:layout_marginLeft="5dp"
+                                    app:cardCornerRadius="16dp">
+
+                                    <ImageView
+                                        android:id="@+id/imageViewFotoPlato"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/imagen_ejemplo_ratio_3_4"
+                                        android:scaleType="fitXY" />
+                                </androidx.cardview.widget.CardView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:paddingLeft="5dp"
+                                        android:paddingEnd="0dp"
+                                        android:paddingRight="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="3"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/textViewNombrePlato"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentStart="true"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_marginStart="0dp"
+                                                android:layout_marginTop="5dp"
+                                                android:layout_marginEnd="0dp"
+                                                android:fontFamily="@font/nunito"
+                                                android:gravity="start"
+                                                android:maxLength="30"
+                                                android:maxLines="2"
+                                                android:text="Ejemplo de nombre "
+                                                android:textSize="18sp"
+                                                android:textStyle="bold" />
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/textViewNombrePlato"
+                                                android:layout_alignParentBottom="true"
+                                                android:layout_marginBottom="5dp"
+                                                android:paddingLeft="5dp"
+                                                android:paddingEnd="5dp"
+                                                android:paddingRight="5dp">
+
+                                                <com.google.android.material.textview.MaterialTextView
+                                                    android:id="@+id/textViewPrecioNormal"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentBottom="true"
+                                                    android:layout_marginBottom="0dp"
+                                                    android:fontFamily="@font/nunito"
+                                                    android:text="00,00€"
+                                                    android:textColor="@android:color/holo_red_dark"
+                                                    android:textSize="24sp" />
+
+                                                <ImageView
+                                                    android:id="@+id/imageViewLineaTachada"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignTop="@+id/textViewPrecioNormal"
+                                                    android:layout_alignEnd="@+id/textViewPrecioNormal"
+                                                    app:srcCompat="@drawable/linea_tachada" />
+
+                                                <TextView
+                                                    android:id="@+id/textViewPrecioOferta"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignTop="@+id/textViewPrecioNormal"
+                                                    android:layout_alignParentRight="true"
+                                                    android:layout_alignParentBottom="true"
+                                                    android:layout_marginStart="10dp"
+                                                    android:layout_marginTop="-5dp"
+                                                    android:layout_marginBottom="0dp"
+                                                    android:layout_toEndOf="@+id/textViewPrecioNormal"
+                                                    android:fontFamily="@font/nunito"
+                                                    android:text="00,00€"
+                                                    android:textColor="@android:color/holo_red_dark"
+                                                    android:textSize="15sp"
+                                                    app:autoSizeTextType="uniform" />
+                                            </RelativeLayout>
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.7"
+                                            android:gravity="center_vertical">
+
+                                            <ImageView
+                                                android:id="@+id/imageViewMas"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:alpha="0.2"
+                                                android:tint="@color/secundario_app"
+                                                app:srcCompat="@drawable/circulo" />
+
+                                            <ImageView
+                                                android:id="@+id/imageViewMas2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignBottom="@+id/imageViewMas"
+                                                android:layout_alignParentStart="true"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_marginStart="0dp"
+                                                android:layout_marginEnd="0dp"
+                                                android:layout_marginBottom="0dp"
+                                                app:srcCompat="@drawable/ic_baseline_settings_24" />
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
+
+                        <!--Colocar aquí nuevos items-->
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewPlatos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="3dp"
+                    app:cardMaxElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:cardCornerRadius="18dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:id="@+id/linear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="128dp"
+                                    android:layout_height="96dp"
+                                    android:layout_margin="3dp"
+                                    android:layout_marginLeft="5dp"
+                                    app:cardCornerRadius="16dp">
+
+                                    <ImageView
+                                        android:id="@+id/imageViewFotoPlato"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/imagen_ejemplo_ratio_3_4"
+                                        android:scaleType="fitXY" />
+                                </androidx.cardview.widget.CardView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:paddingLeft="5dp"
+                                        android:paddingEnd="0dp"
+                                        android:paddingRight="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="3"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/textViewNombrePlato"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentStart="true"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_marginStart="0dp"
+                                                android:layout_marginTop="5dp"
+                                                android:layout_marginEnd="0dp"
+                                                android:fontFamily="@font/nunito"
+                                                android:gravity="start"
+                                                android:maxLength="30"
+                                                android:maxLines="2"
+                                                android:text="Ejemplo de nombre "
+                                                android:textSize="18sp"
+                                                android:textStyle="bold" />
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/textViewNombrePlato"
+                                                android:layout_alignParentBottom="true"
+                                                android:layout_marginBottom="5dp"
+                                                android:paddingLeft="5dp"
+                                                android:paddingEnd="5dp"
+                                                android:paddingRight="5dp">
+
+                                                <com.google.android.material.textview.MaterialTextView
+                                                    android:id="@+id/textViewPrecioNormal"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentBottom="true"
+                                                    android:layout_marginBottom="0dp"
+                                                    android:fontFamily="@font/nunito"
+                                                    android:text="00,00€"
+                                                    android:textColor="@android:color/holo_red_dark"
+                                                    android:textSize="24sp" />
+
+                                                <ImageView
+                                                    android:id="@+id/imageViewLineaTachada"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignTop="@+id/textViewPrecioNormal"
+                                                    android:layout_alignEnd="@+id/textViewPrecioNormal"
+                                                    app:srcCompat="@drawable/linea_tachada" />
+
+                                                <TextView
+                                                    android:id="@+id/textViewPrecioOferta"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignTop="@+id/textViewPrecioNormal"
+                                                    android:layout_alignParentRight="true"
+                                                    android:layout_alignParentBottom="true"
+                                                    android:layout_marginStart="10dp"
+                                                    android:layout_marginTop="-5dp"
+                                                    android:layout_marginBottom="0dp"
+                                                    android:layout_toEndOf="@+id/textViewPrecioNormal"
+                                                    android:fontFamily="@font/nunito"
+                                                    android:text="00,00€"
+                                                    android:textColor="@android:color/holo_red_dark"
+                                                    android:textSize="15sp"
+                                                    app:autoSizeTextType="uniform" />
+                                            </RelativeLayout>
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.7"
+                                            android:gravity="center_vertical">
+
+                                            <ImageView
+                                                android:id="@+id/imageViewMas"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:alpha="0.2"
+                                                android:tint="@color/secundario_app"
+                                                app:srcCompat="@drawable/circulo" />
+
+                                            <ImageView
+                                                android:id="@+id/imageViewMas2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignBottom="@+id/imageViewMas"
+                                                android:layout_alignParentStart="true"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_marginStart="0dp"
+                                                android:layout_marginEnd="0dp"
+                                                android:layout_marginBottom="0dp"
+                                                app:srcCompat="@drawable/ic_baseline_settings_24" />
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
+
+                        <!--Colocar aquí nuevos items-->
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewPlatos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="3dp"
+                    app:cardMaxElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:cardCornerRadius="18dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:id="@+id/linear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="128dp"
+                                    android:layout_height="96dp"
+                                    android:layout_margin="3dp"
+                                    android:layout_marginLeft="5dp"
+                                    app:cardCornerRadius="16dp">
+
+                                    <ImageView
+                                        android:id="@+id/imageViewFotoPlato"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/imagen_ejemplo_ratio_3_4"
+                                        android:scaleType="fitXY" />
+                                </androidx.cardview.widget.CardView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:paddingLeft="5dp"
+                                        android:paddingEnd="0dp"
+                                        android:paddingRight="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="3"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/textViewNombrePlato"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentStart="true"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_marginStart="0dp"
+                                                android:layout_marginTop="5dp"
+                                                android:layout_marginEnd="0dp"
+                                                android:fontFamily="@font/nunito"
+                                                android:gravity="start"
+                                                android:maxLength="30"
+                                                android:maxLines="2"
+                                                android:text="Ejemplo de nombre "
+                                                android:textSize="18sp"
+                                                android:textStyle="bold" />
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/textViewNombrePlato"
+                                                android:layout_alignParentBottom="true"
+                                                android:layout_marginBottom="5dp"
+                                                android:paddingLeft="5dp"
+                                                android:paddingEnd="5dp"
+                                                android:paddingRight="5dp">
+
+                                                <com.google.android.material.textview.MaterialTextView
+                                                    android:id="@+id/textViewPrecioNormal"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentBottom="true"
+                                                    android:layout_marginBottom="0dp"
+                                                    android:fontFamily="@font/nunito"
+                                                    android:text="00,00€"
+                                                    android:textColor="@android:color/holo_red_dark"
+                                                    android:textSize="24sp" />
+
+                                                <ImageView
+                                                    android:id="@+id/imageViewLineaTachada"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignTop="@+id/textViewPrecioNormal"
+                                                    android:layout_alignEnd="@+id/textViewPrecioNormal"
+                                                    app:srcCompat="@drawable/linea_tachada" />
+
+                                                <TextView
+                                                    android:id="@+id/textViewPrecioOferta"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignTop="@+id/textViewPrecioNormal"
+                                                    android:layout_alignParentRight="true"
+                                                    android:layout_alignParentBottom="true"
+                                                    android:layout_marginStart="10dp"
+                                                    android:layout_marginTop="-5dp"
+                                                    android:layout_marginBottom="0dp"
+                                                    android:layout_toEndOf="@+id/textViewPrecioNormal"
+                                                    android:fontFamily="@font/nunito"
+                                                    android:text="00,00€"
+                                                    android:textColor="@android:color/holo_red_dark"
+                                                    android:textSize="15sp"
+                                                    app:autoSizeTextType="uniform" />
+                                            </RelativeLayout>
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.7"
+                                            android:gravity="center_vertical">
+
+                                            <ImageView
+                                                android:id="@+id/imageViewMas"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:alpha="0.2"
+                                                android:tint="@color/secundario_app"
+                                                app:srcCompat="@drawable/circulo" />
+
+                                            <ImageView
+                                                android:id="@+id/imageViewMas2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignBottom="@+id/imageViewMas"
+                                                android:layout_alignParentStart="true"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_marginStart="0dp"
+                                                android:layout_marginEnd="0dp"
+                                                android:layout_marginBottom="0dp"
+                                                app:srcCompat="@drawable/ic_baseline_settings_24" />
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
+
+                        <!--Colocar aquí nuevos items-->
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewPlatos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="3dp"
+                    app:cardMaxElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:cardCornerRadius="18dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:id="@+id/linear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="128dp"
+                                    android:layout_height="96dp"
+                                    android:layout_margin="3dp"
+                                    android:layout_marginLeft="5dp"
+                                    app:cardCornerRadius="16dp">
+
+                                    <ImageView
+                                        android:id="@+id/imageViewFotoPlato"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/imagen_ejemplo_ratio_3_4"
+                                        android:scaleType="fitXY" />
+                                </androidx.cardview.widget.CardView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:paddingLeft="5dp"
+                                        android:paddingEnd="0dp"
+                                        android:paddingRight="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="3"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/textViewNombrePlato"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentStart="true"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_marginStart="0dp"
+                                                android:layout_marginTop="5dp"
+                                                android:layout_marginEnd="0dp"
+                                                android:fontFamily="@font/nunito"
+                                                android:gravity="start"
+                                                android:maxLength="30"
+                                                android:maxLines="2"
+                                                android:text="Ejemplo de nombre "
+                                                android:textSize="18sp"
+                                                android:textStyle="bold" />
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/textViewNombrePlato"
+                                                android:layout_alignParentBottom="true"
+                                                android:layout_marginBottom="5dp"
+                                                android:paddingLeft="5dp"
+                                                android:paddingEnd="5dp"
+                                                android:paddingRight="5dp">
+
+                                                <com.google.android.material.textview.MaterialTextView
+                                                    android:id="@+id/textViewPrecioNormal"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentBottom="true"
+                                                    android:layout_marginBottom="0dp"
+                                                    android:fontFamily="@font/nunito"
+                                                    android:text="00,00€"
+                                                    android:textColor="@android:color/holo_red_dark"
+                                                    android:textSize="24sp" />
+
+                                                <ImageView
+                                                    android:id="@+id/imageViewLineaTachada"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignTop="@+id/textViewPrecioNormal"
+                                                    android:layout_alignEnd="@+id/textViewPrecioNormal"
+                                                    app:srcCompat="@drawable/linea_tachada" />
+
+                                                <TextView
+                                                    android:id="@+id/textViewPrecioOferta"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignTop="@+id/textViewPrecioNormal"
+                                                    android:layout_alignParentRight="true"
+                                                    android:layout_alignParentBottom="true"
+                                                    android:layout_marginStart="10dp"
+                                                    android:layout_marginTop="-5dp"
+                                                    android:layout_marginBottom="0dp"
+                                                    android:layout_toEndOf="@+id/textViewPrecioNormal"
+                                                    android:fontFamily="@font/nunito"
+                                                    android:text="00,00€"
+                                                    android:textColor="@android:color/holo_red_dark"
+                                                    android:textSize="15sp"
+                                                    app:autoSizeTextType="uniform" />
+                                            </RelativeLayout>
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.7"
+                                            android:gravity="center_vertical">
+
+                                            <ImageView
+                                                android:id="@+id/imageViewMas"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:alpha="0.2"
+                                                android:tint="@color/secundario_app"
+                                                app:srcCompat="@drawable/circulo" />
+
+                                            <ImageView
+                                                android:id="@+id/imageViewMas2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignBottom="@+id/imageViewMas"
+                                                android:layout_alignParentStart="true"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_marginStart="0dp"
+                                                android:layout_marginEnd="0dp"
+                                                android:layout_marginBottom="0dp"
+                                                app:srcCompat="@drawable/ic_baseline_settings_24" />
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
+
+                        <!--Colocar aquí nuevos items-->
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewPlatos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="3dp"
+                    app:cardMaxElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:cardCornerRadius="18dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:id="@+id/linear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="128dp"
+                                    android:layout_height="96dp"
+                                    android:layout_margin="3dp"
+                                    android:layout_marginLeft="5dp"
+                                    app:cardCornerRadius="16dp">
+
+                                    <ImageView
+                                        android:id="@+id/imageViewFotoPlato"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/imagen_ejemplo_ratio_3_4"
+                                        android:scaleType="fitXY" />
+                                </androidx.cardview.widget.CardView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:paddingLeft="5dp"
+                                        android:paddingEnd="0dp"
+                                        android:paddingRight="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="3"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/textViewNombrePlato"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentStart="true"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_marginStart="0dp"
+                                                android:layout_marginTop="5dp"
+                                                android:layout_marginEnd="0dp"
+                                                android:fontFamily="@font/nunito"
+                                                android:gravity="start"
+                                                android:maxLength="30"
+                                                android:maxLines="2"
+                                                android:text="Ejemplo de nombre "
+                                                android:textSize="18sp"
+                                                android:textStyle="bold" />
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/textViewNombrePlato"
+                                                android:layout_alignParentBottom="true"
+                                                android:layout_marginBottom="5dp"
+                                                android:paddingLeft="5dp"
+                                                android:paddingEnd="5dp"
+                                                android:paddingRight="5dp">
+
+                                                <com.google.android.material.textview.MaterialTextView
+                                                    android:id="@+id/textViewPrecioNormal"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentBottom="true"
+                                                    android:layout_marginBottom="0dp"
+                                                    android:fontFamily="@font/nunito"
+                                                    android:text="00,00€"
+                                                    android:textColor="@android:color/holo_red_dark"
+                                                    android:textSize="24sp" />
+
+                                                <ImageView
+                                                    android:id="@+id/imageViewLineaTachada"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignTop="@+id/textViewPrecioNormal"
+                                                    android:layout_alignEnd="@+id/textViewPrecioNormal"
+                                                    app:srcCompat="@drawable/linea_tachada" />
+
+                                                <TextView
+                                                    android:id="@+id/textViewPrecioOferta"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignTop="@+id/textViewPrecioNormal"
+                                                    android:layout_alignParentRight="true"
+                                                    android:layout_alignParentBottom="true"
+                                                    android:layout_marginStart="10dp"
+                                                    android:layout_marginTop="-5dp"
+                                                    android:layout_marginBottom="0dp"
+                                                    android:layout_toEndOf="@+id/textViewPrecioNormal"
+                                                    android:fontFamily="@font/nunito"
+                                                    android:text="00,00€"
+                                                    android:textColor="@android:color/holo_red_dark"
+                                                    android:textSize="15sp"
+                                                    app:autoSizeTextType="uniform" />
+                                            </RelativeLayout>
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.7"
+                                            android:gravity="center_vertical">
+
+                                            <ImageView
+                                                android:id="@+id/imageViewMas"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:alpha="0.2"
+                                                android:tint="@color/secundario_app"
+                                                app:srcCompat="@drawable/circulo" />
+
+                                            <ImageView
+                                                android:id="@+id/imageViewMas2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignBottom="@+id/imageViewMas"
+                                                android:layout_alignParentStart="true"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_marginStart="0dp"
+                                                android:layout_marginEnd="0dp"
+                                                android:layout_marginBottom="0dp"
+                                                app:srcCompat="@drawable/ic_baseline_settings_24" />
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
+
+                        <!--Colocar aquí nuevos items-->
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewPlatos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="3dp"
+                    app:cardMaxElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:cardCornerRadius="18dp"
+                            app:cardElevation="5dp">
+
+                            <LinearLayout
+                                android:id="@+id/linear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="128dp"
+                                    android:layout_height="96dp"
+                                    android:layout_margin="3dp"
+                                    android:layout_marginLeft="5dp"
+                                    app:cardCornerRadius="16dp">
+
+                                    <ImageView
+                                        android:id="@+id/imageViewFotoPlato"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/imagen_ejemplo_ratio_3_4"
+                                        android:scaleType="fitXY" />
+                                </androidx.cardview.widget.CardView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:paddingLeft="5dp"
+                                        android:paddingEnd="0dp"
+                                        android:paddingRight="5dp">
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="3"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/textViewNombrePlato"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentStart="true"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_marginStart="0dp"
+                                                android:layout_marginTop="5dp"
+                                                android:layout_marginEnd="0dp"
+                                                android:fontFamily="@font/nunito"
+                                                android:gravity="start"
+                                                android:maxLength="30"
+                                                android:maxLines="2"
+                                                android:text="Ejemplo de nombre "
+                                                android:textSize="18sp"
+                                                android:textStyle="bold" />
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/textViewNombrePlato"
+                                                android:layout_alignParentBottom="true"
+                                                android:layout_marginBottom="5dp"
+                                                android:paddingLeft="5dp"
+                                                android:paddingEnd="5dp"
+                                                android:paddingRight="5dp">
+
+                                                <com.google.android.material.textview.MaterialTextView
+                                                    android:id="@+id/textViewPrecioNormal"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentBottom="true"
+                                                    android:layout_marginBottom="0dp"
+                                                    android:fontFamily="@font/nunito"
+                                                    android:text="00,00€"
+                                                    android:textColor="@android:color/holo_red_dark"
+                                                    android:textSize="24sp" />
+
+                                                <ImageView
+                                                    android:id="@+id/imageViewLineaTachada"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignTop="@+id/textViewPrecioNormal"
+                                                    android:layout_alignEnd="@+id/textViewPrecioNormal"
+                                                    app:srcCompat="@drawable/linea_tachada" />
+
+                                                <TextView
+                                                    android:id="@+id/textViewPrecioOferta"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignTop="@+id/textViewPrecioNormal"
+                                                    android:layout_alignParentRight="true"
+                                                    android:layout_alignParentBottom="true"
+                                                    android:layout_marginStart="10dp"
+                                                    android:layout_marginTop="-5dp"
+                                                    android:layout_marginBottom="0dp"
+                                                    android:layout_toEndOf="@+id/textViewPrecioNormal"
+                                                    android:fontFamily="@font/nunito"
+                                                    android:text="00,00€"
+                                                    android:textColor="@android:color/holo_red_dark"
+                                                    android:textSize="15sp"
+                                                    app:autoSizeTextType="uniform" />
+                                            </RelativeLayout>
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.7"
+                                            android:gravity="center_vertical">
+
+                                            <ImageView
+                                                android:id="@+id/imageViewMas"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerHorizontal="true"
+                                                android:alpha="0.2"
+                                                android:tint="@color/secundario_app"
+                                                app:srcCompat="@drawable/circulo" />
+
+                                            <ImageView
+                                                android:id="@+id/imageViewMas2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignBottom="@+id/imageViewMas"
+                                                android:layout_alignParentStart="true"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_marginStart="0dp"
+                                                android:layout_marginEnd="0dp"
+                                                android:layout_marginBottom="0dp"
+                                                app:srcCompat="@drawable/ic_baseline_settings_24" />
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
+
+                        <!--Colocar aquí nuevos items-->
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

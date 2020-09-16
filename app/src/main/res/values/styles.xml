@@ -1,0 +1,61 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize theme here. -->
+        <item name="colorPrimary">@color/principal_app</item>
+        <item name="colorPrimaryDark">@color/secundario_app</item>
+        <item name="colorAccent">@color/principal_app</item>
+        <item name="android:colorControlActivated">@color/principal_app</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:colorPrimaryDark">@color/principal_app</item>
+        <item name="colorSecondary">@color/secundario_app</item>
+        <item name="android:colorBackground">@color/fondo_app</item>
+        <item name="colorError">@color/Error</item>
+    </style>
+
+    <style name="AppTheme.cliente" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize theme here. -->
+        <item name="colorPrimary">@color/principal_app</item>
+        <item name="colorPrimaryDark">@color/secundario_app</item>
+        <item name="colorAccent">@color/principal_app</item>
+        <item name="android:colorControlActivated">@color/principal_app</item>
+        <item name="android:colorPrimaryDark">@color/principal_app</item>
+        // your status bar color
+        <item name="colorSecondary">@color/secundario_app</item>
+        <item name="android:colorBackground">@color/fondo_app</item>
+        <item name="colorError">@color/Error</item>
+    </style>
+
+
+
+
+
+
+    <style name="CustomShapeAppearance">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Redondeo10">
+        <item name="cornerSize">10%</item>
+    </style>
+
+    <style name="Redondeo20">
+        <item name="cornerSize">20%</item>
+    </style>
+
+    <style name="Redondeo30">
+        <item name="cornerSize">30%</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+</resources>

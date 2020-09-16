@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Kiero+ Gerente</string>
+
+    <string name="baseUrl" translatable="false">http://magicservis.com/MagicFood/locales</string>
+    <string name="baseUrlFoto" translatable="false">http://magicservis.com/MagicFood/fotos/platos/nuevoFotoPlato.php</string>
+
+    <string name="baseUrlLogoLocales" translatable="false">http://magicservis.com/MagicFood/fotos/locales</string>
+    <string name="baseUrlFotoPlatos" translatable="false">http://magicservis.com/MagicFood/fotos/platos</string>
+    <string name="baseUrlFotoIngridientes" translatable="false">http://magicservis.com/MagicFood/fotos/ingridientesRetirables</string>
+    <string name="baseUrlFotoIntolerancias" translatable="false">http://magicservis.com/MagicFood/fotos/intolerancias</string>
+    <string name="title_activity_inicio">Inicio</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="te_recomendaremos_alimentos_para_ti">Te recomendaremos alimentos para ti</string>
+</resources>

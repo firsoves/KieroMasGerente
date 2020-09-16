@@ -1,0 +1,37 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="46.837dp"
+    android:height="43.952dp"
+    android:viewportWidth="46.837"
+    android:viewportHeight="43.952">
+  <path
+      android:pathData="M9.808,36.927A8.781,8.781 0,0 1,1.202 26.39,8.992 8.992,0 0,1 10.124,19.365L12.876,19.365L12.876,36.927Z"
+      android:strokeLineJoin="round"
+      android:strokeWidth="2"
+      android:fillColor="#00000000"
+      android:strokeColor="@color/secundario_app"
+      android:strokeLineCap="round"/>
+  <path
+      android:pathData="M37.028,36.927a8.781,8.781 0,0 0,8.605 -10.537A8.992,8.992 0,0 0,36.712 19.365L33.955,19.365L33.955,36.927Z"
+      android:strokeLineJoin="round"
+      android:strokeWidth="2"
+      android:fillColor="#00000000"
+      android:strokeColor="@color/secundario_app"
+      android:strokeLineCap="round"/>
+  <path
+      android:pathData="M7.611,19.365L7.611,17.293A16,16 0,0 1,19.747 1.487,15.806 15.806,0 0,1 39.223,16.924v2.441"
+      android:strokeLineJoin="round"
+      android:strokeWidth="2"
+      android:fillColor="#00000000"
+      android:strokeColor="@color/secundario_app"
+      android:strokeLineCap="round"/>
+  <path
+      android:pathData="M12.881,36.927h0a5.269,5.269 0,0 0,5.269 5.269"
+      android:strokeLineJoin="round"
+      android:strokeWidth="2"
+      android:fillColor="#00000000"
+      android:strokeColor="@color/secundario_app"
+      android:strokeLineCap="round"/>
+  <path
+      android:pathData="M23.418,42.195m-1.756,0a1.756,1.756 0,1 1,3.512 0a1.756,1.756 0,1 1,-3.512 0"
+      android:fillColor="@color/secundario_app"/>
+</vector>

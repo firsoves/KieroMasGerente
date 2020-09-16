@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5sp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewPlatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="5dp"
+        app:cardMaxElevation="5dp">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="128dp"
+                android:layout_height="96dp"
+                android:layout_margin="3dp"
+                android:layout_marginLeft="5dp"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:id="@+id/imageViewFotoPlato"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="5dp"
+                    android:paddingEnd="0dp"
+                    android:paddingRight="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewNombrePlato"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="0dp"
+                            android:fontFamily="@font/nunito"
+                            android:gravity="start"
+                            android:maxLength="30"
+                            android:maxLines="2"
+                            android:text="Ejemplo de nombre"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textViewNombrePlato"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="5dp"
+                            android:paddingLeft="5dp"
+                            android:paddingEnd="5dp"
+                            android:paddingRight="5dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/textViewPrecioNormal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="0dp"
+                                android:fontFamily="@font/nunito"
+                                android:text="00,00€"
+                                android:textColor="@android:color/holo_red_dark"
+                                android:textSize="24sp" />
+
+                            <ImageView
+                                android:id="@+id/imageViewLineaTachada"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/textViewPrecioNormal"
+                                android:layout_alignEnd="@+id/textViewPrecioNormal"
+                                app:srcCompat="@drawable/linea_tachada" />
+
+                            <TextView
+                                android:id="@+id/textViewPrecioOferta"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/textViewPrecioNormal"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="-5dp"
+                                android:layout_marginBottom="0dp"
+                                android:layout_toEndOf="@+id/textViewPrecioNormal"
+                                android:fontFamily="@font/nunito"
+                                android:text="00,00€"
+                                android:textColor="@android:color/holo_red_dark"
+                                android:textSize="15sp"
+                                app:autoSizeTextType="uniform" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".46">
+
+                        <ImageView
+                            android:id="@+id/imageViewMas"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:tint="#EBFFE6"
+                            app:srcCompat="@drawable/circulo" />
+
+                        <ImageView
+                            android:id="@+id/imageViewMas2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/imageViewMas"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:layout_marginBottom="0dp"
+                            app:srcCompat="@drawable/ic_add" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewNumeroPedidos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/imageViewMenos"
+                            android:layout_below="@+id/imageViewMas"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:fontFamily="@font/roboto"
+                            android:gravity="center|center_horizontal"
+                            android:text="0"
+                            app:autoSizeTextType="uniform" />
+
+                        <ImageView
+                            android:id="@+id/imageViewMenos"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:tint="#FFE6E6"
+                            app:srcCompat="@drawable/circulo" />
+
+                        <ImageView
+                            android:id="@+id/imageViewMenos2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/imageViewMenos"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="0dp"
+                            app:srcCompat="@drawable/ic_remove" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

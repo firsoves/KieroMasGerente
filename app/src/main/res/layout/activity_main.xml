@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animationCache="false"
+    android:background="@color/secundario_app"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView101"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeMaxTextSize="15dp"
+        android:autoSizeTextType="uniform"
+        android:elevation="10dp"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:lines="1"
+        android:text="CONTINUA CON GOOGLE"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonIniciarSesion2"
+        app:layout_constraintEnd_toEndOf="@+id/buttonIniciarSesion2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline25"
+        app:layout_constraintTop_toTopOf="@+id/buttonIniciarSesion2"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonIniciarSesion2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline25"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintStart_toStartOf="@+id/buttonIniciarSesion2"
+        app:layout_constraintTop_toTopOf="@+id/buttonIniciarSesion2"
+        app:srcCompat="@drawable/google" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonIniciarSesion2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#4286F5"
+        android:elevation="2dp"
+        android:onClick="IniciarConGoogle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84000003"
+        app:layout_constraintWidth_percent="0.7"
+        app:shapeAppearance="@style/CustomShapeAppearance" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonIniciarSesion"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.2"
+        android:autoSizeMaxTextSize="50sp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/fondo_button"
+        android:backgroundTint="@color/principal_app"
+        android:fontFamily="@font/roboto"
+        android:onClick="buttoniniciarsesion"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCrearCuenta"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="@+id/buttonCrearCuenta"
+        app:layout_constraintTop_toTopOf="@+id/guideline6"
+        app:shapeAppearance="@style/CustomShapeAppearance" />
+
+    <TextView
+        android:id="@+id/textViewBienvenido"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/roboto_bold"
+        android:text="¡Bienvenido!"
+        android:textColor="@color/Blanco"
+        android:textStyle="bold"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toTopOf="@+id/guideline13"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/textViewBienvenido2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Conecta tu negocio"
+        android:textColor="@color/Blanco"
+        android:textStyle="bold"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintTop_toTopOf="@+id/guideline12"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonCrearCuenta"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.2"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="@color/principal_app"
+        android:fontFamily="@font/roboto_black"
+        android:foregroundGravity="center"
+        android:onClick="CrearCuenta"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="4dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttonIniciarSesion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="@+id/guideline14"
+        app:layout_constraintWidth_percent="0.6"
+        app:shapeAppearance="@style/CustomShapeAppearance" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.54" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.29" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.28" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:alpha="0.2"
+        android:elevation="15dp"
+        android:fontFamily="@font/nunito_semibold"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="Crear Cuenta"
+        android:textColor="@color/Blanco"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonCrearCuenta"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCrearCuenta"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="@+id/buttonCrearCuenta"
+        app:layout_constraintTop_toTopOf="@+id/buttonCrearCuenta" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="15dp"
+        android:alpha="0.2"
+        android:elevation="15dp"
+        android:fontFamily="@font/nunito_semibold"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="Iniciar Sesión"
+        android:textColor="@color/Blanco"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonIniciarSesion"
+        app:layout_constraintEnd_toEndOf="@+id/buttonIniciarSesion"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="@+id/buttonIniciarSesion"
+        app:layout_constraintTop_toTopOf="@+id/buttonIniciarSesion" />
+
+    <ImageView
+        android:id="@+id/imageView96"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/kiero_mas" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Blanco">#F9FAFE</color>
+    <color name="blanco_suave">#F9FAFE</color>
+    <color name="blanco_grisaceo_fondo">#F4F4F4</color>
+    <color name="Negro">#000000</color>
+    <color name="secundario_app">#2F384B</color>
+    <color name="fondo_gris_azulado">#c7cdd9</color>
+    <color name="verde_suave">#CAF8B7</color>
+    <color name="rojo_suave">#FFC4C4</color>
+    <color name="principal_app">#F23B5F</color>
+    <color name="principal_suave">#FFE1E7</color>
+    <color name="fondo_app">#F9FAFE</color>
+    <color name="Error">#cc0000</color>
+    <color name="Gris">#E0E0E0</color>
+    <color name="transparente">#000000FF</color>
+
+
+
+
+    <color name="color_local_suave">#fdc364</color>
+    <color name="color_local_disipado">#fce9ca</color>
+    <color name="color_local_base">#FCA311</color>
+    <color name="color_local_intenso">#e0910d</color>
+    <color name="secondaryLightColor">#ff823f</color>
+    <color name="secondaryDarkColor">#c30500</color>
+
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#000000</color>
+    <color name="Verde">#4CAF50</color>
+
+
+</resources>

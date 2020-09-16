@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".VistaPreviaComponente">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/topLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/color_local_base"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/barra_de_arriba" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewArribaCentro"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:elevation="20dp"
+        android:fontFamily="@font/nunito_black"
+        android:gravity="center"
+        android:text="Restaurante"
+        android:textColor="@color/Negro"
+        app:layout_constraintBottom_toBottomOf="@+id/topLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewFotoPlato"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="50dp"
+        android:adjustViewBounds="true"
+        android:elevation="5dp"
+        android:foreground="@drawable/redondeo_forzado"
+        android:foregroundTint="@color/color_local_base"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewFondoFoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topLayout"
+        app:srcCompat="@drawable/imagen_ejemplo_ratio_3_4" />
+
+    <ImageView
+        android:id="@+id/imageViewFondoFoto"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="4dp"
+        android:tint="@color/color_local_base"
+        app:layout_constraintBottom_toTopOf="@+id/guideline103"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topLayout"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/rectangulo" />
+
+    <TextView
+        android:id="@+id/textViewNombrePlato"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="6dp"
+        android:fontFamily="@font/nunito"
+        android:gravity="center"
+        android:text="Ejemplo de comida"
+        android:textColor="@color/Negro"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewFondoFoto"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewFotoPlato"
+        app:layout_constraintStart_toStartOf="@+id/imageViewFotoPlato"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFotoPlato" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewLineaTachada2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignStart="@+id/textViewPrecioNormal"
+        android:layout_alignTop="@+id/textViewPrecioNormal"
+        android:layout_alignEnd="@+id/textViewPrecioNormal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="11dp"
+        android:foreground="@drawable/linea_tachada"
+        android:foregroundTint="@color/viewfinder_mask"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewPrecioPlatoSinDescuento"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPrecioPlatoSinDescuento"
+        app:layout_constraintStart_toStartOf="@+id/textViewPrecioPlatoSinDescuento"
+        app:layout_constraintTop_toTopOf="@+id/textViewPrecioPlatoSinDescuento" />
+
+    <TextView
+        android:id="@+id/textViewPrecioPlatoSinDescuento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:alpha="0.8"
+        android:elevation="10dp"
+        android:fontFamily="@font/nunito_bold"
+        android:shadowColor="#909090"
+        android:shadowRadius="20"
+        android:text="0,00€"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/CardViewMenu" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textViewPrecioPlato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:alpha="0.8"
+        android:elevation="10dp"
+        android:fontFamily="@font/nunito_bold"
+        android:shadowColor="#909090"
+        android:shadowRadius="20"
+        android:text="0,00€"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/CardViewMenu" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button12"
+        android:layout_width="125dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/rojo_suave"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="Volver"
+        android:text="Volver"
+        android:textColor="@color/common_google_signin_btn_text_light_default"
+        app:cornerRadius="16dp"
+        app:icon="@drawable/icon_atras"
+        app:iconTint="@color/common_google_signin_btn_text_light_default"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/guideline45"
+        app:layout_constraintTop_toTopOf="@+id/button" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/verde_suave"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="Generar"
+        android:textColor="@color/common_google_signin_btn_text_light_default"
+        app:cornerRadius="16dp"
+        app:icon="@drawable/hecho"
+        app:iconTint="@color/common_google_signin_btn_text_light_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button12"
+        app:layout_constraintTop_toTopOf="@+id/CardViewMenu" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:overScrollMode="always"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFotoPlato"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewObservacionPlato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:gravity="center"
+                android:paddingLeft="18dp"
+                android:paddingTop="60dp"
+                android:paddingRight="12dp"
+                android:text="Los palitos de mozzarella (mozzarella sticks) son trozos alargados de queso mozzarella rebozados o empanados y fritos. Se sirven a menudo en restaurantes como aperitivo, a veces como parte de un plato combinado que incluye alitas de pollo, potato skins, calabacín frito o nachos, entre otros." />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="18dp"
+                android:orientation="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listaIntolerancias"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:alpha="0.6"
+                    android:foregroundGravity="center_vertical|center_horizontal"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="8dp"></androidx.recyclerview.widget.RecyclerView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewIngridientesElegibles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                app:cardBackgroundColor="@color/Blanco"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textViewIngridientesElegibles"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:fontFamily="@font/nunito_black"
+                        android:text="Seleccionables"
+                        android:textSize="20sp"
+                        android:visibility="visible"
+                        tools:layout_editor_absoluteY="434dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="left"
+                        android:orientation="horizontal">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/listaIngridientesElegibles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:orientation="horizontal" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewIngridientesAnadibles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="18dp"
+                app:cardBackgroundColor="@color/Blanco"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textViewIngridientesAnadibles"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:fontFamily="@font/nunito_black"
+                        android:text="Añadibles"
+                        android:textSize="20sp"
+                        android:visibility="visible"
+                        tools:layout_editor_absoluteY="434dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="left"
+                        android:orientation="horizontal">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/listaIngridientesAnadibles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:orientation="horizontal"></androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewIngridientesRetirables"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginBottom="30dp"
+                app:cardBackgroundColor="@color/Blanco"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textViewIngridientesRetirables"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:fontFamily="@font/nunito_black"
+                        android:text="Retirables"
+                        android:textSize="20sp"
+                        android:visibility="visible"
+                        tools:layout_editor_absoluteY="434dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="left"
+                        android:orientation="horizontal">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/listaIngridientesRetirables"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:orientation="horizontal"></androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="150dp"
+                android:orientation="horizontal"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMenu"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/CardViewMenu"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="5dp"
+        android:elevation="5dp"
+        app:cardBackgroundColor="#fff"
+        app:cardCornerRadius="32.5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline97"
+        app:shapeAppearance="@style/Redondeo20">
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:elevation="1dp"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/degradado" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline103"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline82"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline97"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.89" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.29" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline99"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.96" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

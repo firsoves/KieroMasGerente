@@ -1,0 +1,12 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="484dp"
+    android:height="100dp"
+    android:viewportWidth="484"
+    android:viewportHeight="110">
+  <path
+      android:pathData="M9,9L475,100"
+      android:strokeWidth="18"
+      android:fillColor="#00000000"
+      android:strokeColor="@color/common_google_signin_btn_text_light"
+      android:strokeLineCap="round"/>
+</vector>
