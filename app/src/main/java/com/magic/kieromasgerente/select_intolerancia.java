@@ -100,7 +100,7 @@ public class select_intolerancia extends AppCompatActivity {
             }
             loopId++;
         }
-        Intent intentInicio = new Intent(select_intolerancia.this, crear_producto.class);
+        Intent intentInicio = new Intent(select_intolerancia.this, CrearProducto.class);
 
         intentInicio.putExtra("selectedIntolerances", selectedCheckboxes);
         startActivity(intentInicio);

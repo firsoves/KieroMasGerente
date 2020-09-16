@@ -8,7 +8,7 @@
 
 
     <androidx.appcompat.widget.AppCompatImageView
-android:id="@+id/barra_arriba"
+android:id="@+id/imageViewBarraArriba"
 android:layout_width="0dp"
 android:layout_height="0dp"
 android:background="@drawable/barra_de_arribarecurso"
@@ -23,20 +23,20 @@ app:layout_constraintTop_toTopOf="parent"
 app:layout_constraintWidth_percent="2" />
 
 <androidx.appcompat.widget.AppCompatImageView
-android:id="@+id/kiero_mas"
+android:id="@+id/imageViewKieroMas"
 android:layout_width="0dp"
 android:layout_height="0dp"
 android:layout_marginTop="6dp"
 android:layout_marginBottom="8dp"
 android:elevation="10dp"
-app:layout_constraintBottom_toBottomOf="@+id/barra_arriba"
+app:layout_constraintBottom_toBottomOf="@+id/imageViewBarraArriba"
 app:layout_constraintEnd_toEndOf="parent"
 app:layout_constraintStart_toStartOf="parent"
 app:layout_constraintTop_toTopOf="parent"
 app:srcCompat="@drawable/kiero_mas" />
 
 <androidx.appcompat.widget.AppCompatImageView
-android:id="@+id/Atras"
+android:id="@+id/imageViewAtras"
 android:layout_width="wrap_content"
 android:layout_height="0dp"
 android:layout_gravity="end"
@@ -46,7 +46,7 @@ android:alpha="0.8"
 android:elevation="8dp"
 android:onClick="Atras"
 android:tint="@color/Blanco"
-app:layout_constraintBottom_toBottomOf="@+id/barra_arriba"
+app:layout_constraintBottom_toBottomOf="@+id/imageViewBarraArriba"
 app:layout_constraintEnd_toEndOf="parent"
 app:layout_constraintHorizontal_bias="0.05"
 app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +54,7 @@ app:layout_constraintTop_toTopOf="parent"
 app:srcCompat="@drawable/regresa" />
 
 <androidx.appcompat.widget.AppCompatImageView
-android:id="@+id/Ayuda"
+android:id="@+id/imageViewAyuda"
 android:layout_width="wrap_content"
 android:layout_height="0dp"
 android:layout_gravity="end"
@@ -63,7 +63,7 @@ android:layout_marginBottom="8dp"
 android:alpha="0.8"
 android:elevation="8dp"
 android:tint="@color/Blanco"
-app:layout_constraintBottom_toBottomOf="@+id/barra_arriba"
+app:layout_constraintBottom_toBottomOf="@+id/imageViewBarraArriba"
 app:layout_constraintEnd_toEndOf="parent"
 app:layout_constraintHorizontal_bias="0.92"
 app:layout_constraintStart_toStartOf="parent"
@@ -71,7 +71,7 @@ app:layout_constraintTop_toTopOf="parent"
 app:srcCompat="@drawable/signo_de_interrogacion" />
 
     <ScrollView
-        android:id="@+id/scrollView2"
+        android:id="@+id/scrollViewGeneral"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@color/fondo_gris_azulado"
@@ -119,7 +119,7 @@ app:srcCompat="@drawable/signo_de_interrogacion" />
                     android:orientation="vertical">
 
                     <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/imageView9"
+                        android:id="@+id/imageViewFotoProducto"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
@@ -150,22 +150,22 @@ app:srcCompat="@drawable/signo_de_interrogacion" />
                             android:orientation="vertical">
 
                             <ImageView
-                                android:id="@+id/imageView10"
+                                android:id="@+id/imageViewRecursos"
                                 android:layout_width="match_parent"
                                 android:layout_height="60dp"
                                 android:layout_weight="1"
-                                android:onClick="select_icon"
+                                android:onClick="Recursos"
                                 android:tint="#676767"
-                                app:layout_constraintBottom_toBottomOf="@+id/imageView9"
-                                app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageViewFotoProducto"
+                                app:layout_constraintEnd_toStartOf="@+id/imageViewFotoProducto"
                                 app:layout_constraintHeight_percent="0.1"
                                 app:layout_constraintHorizontal_bias="0.065"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="@+id/imageView9"
+                                app:layout_constraintTop_toTopOf="@+id/imageViewFotoProducto"
                                 app:srcCompat="@drawable/ic_baseline_pageview_24" />
 
                             <TextView
-                                android:id="@+id/textView105"
+                                android:id="@+id/textViewRecursos"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -181,22 +181,22 @@ app:srcCompat="@drawable/signo_de_interrogacion" />
 
                             <ImageView
 
-                                android:id="@+id/imageView24"
+                                android:id="@+id/imageViewGaleria"
                                 android:layout_width="match_parent"
                                 android:layout_height="60dp"
                                 android:layout_weight="1"
                                 android:onClick="select_photo"
                                 android:tint="#676767"
-                                app:layout_constraintBottom_toBottomOf="@+id/imageView9"
-                                app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageViewFotoProducto"
+                                app:layout_constraintEnd_toStartOf="@+id/imageViewFotoProducto"
                                 app:layout_constraintHeight_percent="0.1"
                                 app:layout_constraintHorizontal_bias="0.065"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="@+id/imageView9"
+                                app:layout_constraintTop_toTopOf="@+id/imageViewFotoProducto"
                                 app:srcCompat="@drawable/galeria" />
 
                             <TextView
-                                android:id="@+id/textView106"
+                                android:id="@+id/textViewGaleria"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -211,22 +211,22 @@ app:srcCompat="@drawable/signo_de_interrogacion" />
                             android:orientation="vertical">
 
                             <ImageView
-                                android:id="@+id/imageView11"
+                                android:id="@+id/imageViewNuevoFoto"
                                 android:layout_width="match_parent"
                                 android:layout_height="60dp"
                                 android:layout_weight="1"
                                 android:onClick="hacerFoto"
                                 android:tint="#676767"
-                                app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageViewFotoProducto"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHeight_percent="0.1"
                                 app:layout_constraintHorizontal_bias="0.065"
-                                app:layout_constraintStart_toEndOf="@+id/imageView9"
-                                app:layout_constraintTop_toTopOf="@+id/imageView9"
+                                app:layout_constraintStart_toEndOf="@+id/imageViewFotoProducto"
+                                app:layout_constraintTop_toTopOf="@+id/imageViewFotoProducto"
                                 app:srcCompat="@drawable/camara" />
 
                             <TextView
-                                android:id="@+id/textView107"
+                                android:id="@+id/textViewNuevoFoto"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -283,7 +283,7 @@ app:srcCompat="@drawable/signo_de_interrogacion" />
                             android:orientation="vertical">
 
                             <com.google.android.material.textfield.TextInputLayout
-                                android:id="@+id/nombreProducto"
+                                android:id="@+id/textInputNombreProducto"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:hint="Título de Oferta"
@@ -317,7 +317,7 @@ app:srcCompat="@drawable/signo_de_interrogacion" />
                             android:orientation="vertical">
 
                             <com.google.android.material.textfield.TextInputLayout
-                                android:id="@+id/descripcionProducto"
+                                android:id="@+id/textInputDescripcionProducto"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:hint="Descripción"
@@ -351,7 +351,7 @@ app:srcCompat="@drawable/signo_de_interrogacion" />
                             android:orientation="horizontal">
 
                             <com.google.android.material.textfield.TextInputLayout
-                                android:id="@+id/precioProducto"
+                                android:id="@+id/textInputPrecioProducto"
                                 style="@android:style/TextAppearance.Large"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -373,7 +373,7 @@ app:srcCompat="@drawable/signo_de_interrogacion" />
                             </com.google.android.material.textfield.TextInputLayout>
 
                             <TextView
-                                android:id="@+id/textView9"
+                                android:id="@+id/textViewEuro"
                                 android:layout_width="30dp"
                                 android:layout_height="70dp"
                                 android:layout_gravity="center_vertical"
@@ -385,7 +385,7 @@ app:srcCompat="@drawable/signo_de_interrogacion" />
                                 android:textSize="36sp" />
 
                             <ToggleButton
-                                android:id="@+id/toggleButton"
+                                android:id="@+id/toggleButtonUnidadesKilos"
                                 android:layout_width="130dp"
                                 android:layout_height="73dp"
                                 android:layout_gravity="center_vertical"
@@ -403,7 +403,7 @@ app:srcCompat="@drawable/signo_de_interrogacion" />
                     </androidx.cardview.widget.CardView>
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/button9"
+                        android:id="@+id/buttonCategorias"
                         android:layout_width="match_parent"
                         android:layout_height="58dp"
                         android:layout_margin="16dp"
@@ -447,7 +447,7 @@ app:srcCompat="@drawable/signo_de_interrogacion" />
                                     app:srcCompat="@drawable/comida_en_mesa" />
 
                                 <CheckBox
-                                    android:id="@+id/servicioMesa"
+                                    android:id="@+id/checkBoxServicioMesa"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -477,7 +477,7 @@ app:srcCompat="@drawable/signo_de_interrogacion" />
                                     app:srcCompat="@drawable/comida_para_llevar" />
 
                                 <CheckBox
-                                    android:id="@+id/recogidaLocal"
+                                    android:id="@+id/checkBoxRecogidaLocal"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -507,7 +507,7 @@ app:srcCompat="@drawable/signo_de_interrogacion" />
                                     app:srcCompat="@drawable/entrega_de_comida" />
 
                                 <CheckBox
-                                    android:id="@+id/repartoDomicilio"
+                                    android:id="@+id/checkBoxRepartoDomicilio"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
@@ -554,7 +554,7 @@ app:srcCompat="@drawable/signo_de_interrogacion" />
                     android:orientation="vertical">
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/button8"
+                        android:id="@+id/buttonIntolerancias"
                         android:layout_width="match_parent"
                         android:layout_height="58dp"
                         android:layout_marginLeft="16dp"
@@ -576,7 +576,7 @@ app:srcCompat="@drawable/signo_de_interrogacion" />
                         app:iconTint="#676767" />
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/button6"
+                        android:id="@+id/buttonIngridientesSeleccionables"
                         android:layout_width="match_parent"
                         android:layout_height="58dp"
                         android:layout_marginLeft="16dp"
@@ -597,7 +597,7 @@ app:srcCompat="@drawable/signo_de_interrogacion" />
                         app:iconTint="#676767" />
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/button7"
+                        android:id="@+id/buttonIngridientesAnadibles"
                         android:layout_width="match_parent"
                         android:layout_height="58dp"
                         android:layout_marginLeft="16dp"
@@ -618,7 +618,7 @@ app:srcCompat="@drawable/signo_de_interrogacion" />
                         app:iconTint="#676767" />
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/button5"
+                        android:id="@+id/buttonIngridientesRetirables"
                         android:layout_width="match_parent"
                         android:layout_height="58dp"
                         android:layout_marginLeft="16dp"
@@ -675,7 +675,7 @@ app:srcCompat="@drawable/signo_de_interrogacion" />
                     android:orientation="vertical">
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/vista_previa_producto"
+                        android:id="@+id/buttonVistaPreviaProducto"
                         android:layout_width="match_parent"
                         android:layout_height="58dp"
                         android:layout_margin="16dp"
@@ -694,7 +694,7 @@ app:srcCompat="@drawable/signo_de_interrogacion" />
                         app:iconTint="@color/zxing_custom_result_view" />
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/confirmar_producto"
+                        android:id="@+id/buttonCrearProducto"
                         android:layout_width="match_parent"
                         android:layout_height="58dp"
                         android:layout_marginStart="16dp"

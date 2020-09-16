@@ -59,7 +59,7 @@ public class SeleccionarCategoriaProducto extends AppCompatActivity {
     }
 
     public void confirmar_categorias(View view) {
-        Intent intentInicio = new Intent(SeleccionarCategoriaProducto.this, crear_producto.class);
+        Intent intentInicio = new Intent(SeleccionarCategoriaProducto.this, CrearProducto.class);
         startActivity(intentInicio);
 
         int loopId=0;

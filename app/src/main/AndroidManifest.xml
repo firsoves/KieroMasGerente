@@ -68,7 +68,7 @@
         <activity android:name="com.magic.kieromasgerente.componentes_retirables" />
         <activity android:name="com.magic.kieromasgerente.select_intolerancia" />
         <activity android:name="com.magic.kieromasgerente.crear_notificacion" />
-        <activity android:name="com.magic.kieromasgerente.crear_producto" />
+        <activity android:name="com.magic.kieromasgerente.CrearProducto" />
         <activity android:name="com.magic.kieromasgerente.qr_grande" />
         <activity android:name="com.magic.kieromasgerente.config_inicio_negocio" />
         <activity android:name="com.magic.kieromasgerente.crear_cuenta" />

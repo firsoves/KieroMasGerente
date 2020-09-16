@@ -10,7 +10,7 @@
 
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/barra_arriba"
+        android:id="@+id/imageViewBarraArriba"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/barra_de_arribarecurso"
@@ -25,20 +25,20 @@
         app:layout_constraintWidth_percent="2" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/kiero_mas"
+        android:id="@+id/imageViewKieroMas"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="6dp"
         android:layout_marginBottom="8dp"
         android:elevation="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/barra_arriba"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewBarraArriba"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/kiero_mas" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/Atras"
+        android:id="@+id/imageViewAtras"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_gravity="end"
@@ -48,7 +48,7 @@
         android:elevation="8dp"
         android:onClick="Atras"
         android:tint="@color/Blanco"
-        app:layout_constraintBottom_toBottomOf="@+id/barra_arriba"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewBarraArriba"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +56,7 @@
         app:srcCompat="@drawable/regresa" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/Ayuda"
+        android:id="@+id/imageViewAyuda"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_gravity="end"
@@ -65,7 +65,7 @@
         android:alpha="0.8"
         android:elevation="8dp"
         android:tint="@color/Blanco"
-        app:layout_constraintBottom_toBottomOf="@+id/barra_arriba"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewBarraArriba"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.92"
         app:layout_constraintStart_toStartOf="parent"
@@ -156,23 +156,23 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:id="@+id/imageView10"
+                                android:id="@+id/imageViewRecursos"
                                 android:layout_width="match_parent"
                                 android:layout_height="60dp"
                                 android:layout_weight="1"
                                 android:alpha="0.8"
-                                android:onClick="select_icon"
+                                android:onClick="Recursos"
                                 android:tint="@color/secundario_app"
-                                app:layout_constraintBottom_toBottomOf="@+id/imageView9"
-                                app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageViewFotoProducto"
+                                app:layout_constraintEnd_toStartOf="@+id/imageViewFotoProducto"
                                 app:layout_constraintHeight_percent="0.1"
                                 app:layout_constraintHorizontal_bias="0.065"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="@+id/imageView9"
+                                app:layout_constraintTop_toTopOf="@+id/imageViewFotoProducto"
                                 app:srcCompat="@drawable/ic_baseline_pageview_24" />
 
                             <TextView
-                                android:id="@+id/textView105"
+                                android:id="@+id/textViewRecursos"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
@@ -190,22 +190,22 @@
 
                             <ImageView
 
-                                android:id="@+id/imageView24"
+                                android:id="@+id/imageViewGaleria"
                                 android:layout_width="match_parent"
                                 android:layout_height="60dp"
                                 android:layout_weight="1"
                                 android:alpha="0.8"
                                 android:tint="@color/secundario_app"
-                                app:layout_constraintBottom_toBottomOf="@+id/imageView9"
-                                app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageViewFotoProducto"
+                                app:layout_constraintEnd_toStartOf="@+id/imageViewFotoProducto"
                                 app:layout_constraintHeight_percent="0.1"
                                 app:layout_constraintHorizontal_bias="0.065"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="@+id/imageView9"
+                                app:layout_constraintTop_toTopOf="@+id/imageViewFotoProducto"
                                 app:srcCompat="@drawable/galeria" />
 
                             <TextView
-                                android:id="@+id/textView106"
+                                android:id="@+id/textViewGaleria"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
@@ -222,22 +222,22 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:id="@+id/imageView11"
+                                android:id="@+id/imageViewNuevoFoto"
                                 android:layout_width="match_parent"
                                 android:layout_height="60dp"
                                 android:layout_weight="1"
                                 android:alpha="0.8"
                                 android:tint="@color/secundario_app"
-                                app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageViewFotoProducto"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHeight_percent="0.1"
                                 app:layout_constraintHorizontal_bias="0.065"
-                                app:layout_constraintStart_toEndOf="@+id/imageView9"
-                                app:layout_constraintTop_toTopOf="@+id/imageView9"
+                                app:layout_constraintStart_toEndOf="@+id/imageViewFotoProducto"
+                                app:layout_constraintTop_toTopOf="@+id/imageViewFotoProducto"
                                 app:srcCompat="@drawable/camara" />
 
                             <TextView
-                                android:id="@+id/textView107"
+                                android:id="@+id/textViewNuevoFoto"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
@@ -410,12 +410,12 @@
                                 android:layout_weight="1"
                                 android:alpha="0.8"
                                 android:tint="@color/secundario_app"
-                                app:layout_constraintBottom_toBottomOf="@+id/imageView9"
-                                app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageViewFotoProducto"
+                                app:layout_constraintEnd_toStartOf="@+id/imageViewFotoProducto"
                                 app:layout_constraintHeight_percent="0.1"
                                 app:layout_constraintHorizontal_bias="0.065"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="@+id/imageView9"
+                                app:layout_constraintTop_toTopOf="@+id/imageViewFotoProducto"
                                 app:srcCompat="@drawable/eliminar_ubicacion_gps" />
 
                             <TextView
@@ -442,12 +442,12 @@
                                 android:layout_weight="1"
                                 android:alpha="0.8"
                                 android:tint="@color/secundario_app"
-                                app:layout_constraintBottom_toBottomOf="@+id/imageView9"
-                                app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageViewFotoProducto"
+                                app:layout_constraintEnd_toStartOf="@+id/imageViewFotoProducto"
                                 app:layout_constraintHeight_percent="0.1"
                                 app:layout_constraintHorizontal_bias="0.065"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="@+id/imageView9"
+                                app:layout_constraintTop_toTopOf="@+id/imageViewFotoProducto"
                                 app:srcCompat="@drawable/ubicacion_gps" />
 
                             <TextView
@@ -473,12 +473,12 @@
                                 android:layout_weight="1"
                                 android:alpha="0.8"
                                 android:tint="@color/secundario_app"
-                                app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageViewFotoProducto"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHeight_percent="0.1"
                                 app:layout_constraintHorizontal_bias="0.065"
-                                app:layout_constraintStart_toEndOf="@+id/imageView9"
-                                app:layout_constraintTop_toTopOf="@+id/imageView9"
+                                app:layout_constraintStart_toEndOf="@+id/imageViewFotoProducto"
+                                app:layout_constraintTop_toTopOf="@+id/imageViewFotoProducto"
                                 app:srcCompat="@drawable/brujula_gps" />
 
                             <TextView
@@ -532,7 +532,7 @@
                     android:orientation="vertical">
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/vista_previa_producto"
+                        android:id="@+id/buttonVistaPreviaProducto"
                         android:layout_width="match_parent"
                         android:layout_height="58dp"
                         android:layout_margin="16dp"
@@ -551,7 +551,7 @@
                         app:iconTint="@color/zxing_custom_result_view" />
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/confirmar_producto"
+                        android:id="@+id/buttonCrearProducto"
                         android:layout_width="match_parent"
                         android:layout_height="58dp"
                         android:layout_marginStart="16dp"

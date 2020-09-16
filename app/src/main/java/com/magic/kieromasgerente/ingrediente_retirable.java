@@ -30,7 +30,7 @@ public class ingrediente_retirable extends AppCompatActivity {
     }
 
     public void confirmar_cambios(View view) {
-        Intent intentInicio = new Intent(ingrediente_retirable.this, crear_producto.class);
+        Intent intentInicio = new Intent(ingrediente_retirable.this, CrearProducto.class);
         startActivity(intentInicio);
 
         finish();

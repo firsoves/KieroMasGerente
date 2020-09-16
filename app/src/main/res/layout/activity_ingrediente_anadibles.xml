@@ -9,20 +9,20 @@
 
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/kiero_mas"
+        android:id="@+id/imageViewKieroMas"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="6dp"
         android:layout_marginBottom="8dp"
         android:elevation="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/barra_arriba"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewBarraArriba"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/kiero_mas" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/barra_arriba"
+        android:id="@+id/imageViewBarraArriba"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/barra_de_arribarecurso"
@@ -37,7 +37,7 @@
         app:layout_constraintWidth_percent="2"/>
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/Atras"
+        android:id="@+id/imageViewAtras"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_gravity="end"
@@ -47,7 +47,7 @@
         android:onClick="Atras"
         android:elevation="8dp"
         android:tint="@color/Blanco"
-        app:layout_constraintBottom_toBottomOf="@+id/barra_arriba"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewBarraArriba"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +55,7 @@
         app:srcCompat="@drawable/regresa" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/Ayuda"
+        android:id="@+id/imageViewAyuda"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_gravity="end"
@@ -64,7 +64,7 @@
         android:alpha="0.8"
         android:elevation="8dp"
         android:tint="@color/Blanco"
-        app:layout_constraintBottom_toBottomOf="@+id/barra_arriba"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewBarraArriba"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.92"
         app:layout_constraintStart_toStartOf="parent"

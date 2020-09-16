@@ -31,7 +31,7 @@ public class VistaPreviaComponente extends AppCompatActivity {
     }
 
     public void Volver(View view) {
-        Intent intentInicio = new Intent(VistaPreviaComponente.this, crear_producto.class);
+        Intent intentInicio = new Intent(VistaPreviaComponente.this, CrearProducto.class);
         startActivity(intentInicio);
 
         finish();

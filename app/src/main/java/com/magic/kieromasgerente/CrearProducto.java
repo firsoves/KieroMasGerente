@@ -36,7 +36,7 @@ import retrofit2.Response;
 
 import com.magic.kieromasgerente.Servidor.SubidaFoto;
 
-public class crear_producto extends AppCompatActivity {
+public class CrearProducto extends AppCompatActivity {
 
     private List<Retrofit2> datos;
     private ApiInterface apiInterface;
@@ -59,9 +59,9 @@ public class crear_producto extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_producto);
-        productImageView = findViewById(R.id.imageView9);
-        textInputLayoutNombreProducto = findViewById(R.id.nombreProducto);
-        textInputLayoutPrecioProducto = findViewById(R.id.precioProducto);
+        productImageView = findViewById(R.id.imageViewFotoProducto);
+        textInputLayoutNombreProducto = findViewById(R.id.textInputNombreProducto);
+        textInputLayoutPrecioProducto = findViewById(R.id.textInputPrecioProducto);
         Intent intentCropped = getIntent();
 
         if (intentCropped.getData() != null) productImageView.setImageURI(intentCropped.getData());
@@ -77,69 +77,6 @@ public class crear_producto extends AppCompatActivity {
         this.getWindow().getDecorView().setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                         | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
-    }
-
-    public void intolerancias(View view) {
-
-        Intent intentInicio = new Intent(crear_producto.this, select_intolerancia.class);
-        Intent previousIntent = getIntent();
-        Bundle extras = previousIntent.getExtras();
-        if (extras != null) {
-            if (extras.containsKey("selectedIntolerances")) {
-                intentInicio.putExtra("selectedIntolerances", previousIntent.getIntArrayExtra("selectedIntolerances"));
-            }
-        }
-        startActivity(intentInicio);
-
-        finish();
-    }
-
-    public void select_icon(View view) {
-        Intent intentInicio = new Intent(crear_producto.this, select_icon.class);
-        startActivity(intentInicio);
-
-        finish();
-    }
-
-
-    public void ingredientes_seleccionables(View view) {
-        Intent intentInicio = new Intent(crear_producto.this, ingrediente_seleccionable.class);
-        startActivity(intentInicio);
-
-        finish();
-    }
-
-    public void ingrediente_retirable(View view) {
-        Intent intentInicio = new Intent(crear_producto.this, ingrediente_retirable.class);
-        startActivity(intentInicio);
-
-        finish();
-    }
-
-    public void ingrediente_anadible(View view) {
-        Intent intentInicio = new Intent(crear_producto.this, ingrediente_anadibles.class);
-        startActivity(intentInicio);
-
-        finish();
-    }
-
-    public void hacerFoto(View view) {
-
-
-        if (checkSelfPermission(Manifest.permission.CAMERA)
-                != PackageManager.PERMISSION_GRANTED || checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
-            requestPermissions(new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                    MY_CAMERA_REQUEST_CODE);
-        } else {
-            dispatchTakePictureIntent();
-        }
-    }
-
-    public void select_photo(View view) {
-        Intent galeryIntent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
-        galeryIntent.setType("image/*");
-        startActivityForResult(galeryIntent, PICK_IMAGE);
     }
 
     private void dispatchTakePictureIntent() {
@@ -158,27 +95,11 @@ public class crear_producto extends AppCompatActivity {
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-
-        if (requestCode == MY_CAMERA_REQUEST_CODE) {
-
-            if (grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(this, "camera permission granted", Toast.LENGTH_LONG).show();
-                dispatchTakePictureIntent();
-            } else {
-                Toast.makeText(this, "camera permission denied", Toast.LENGTH_LONG).show();
-            }
-        }
-    }
-
-    @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == CAMERA_CAPTURE_CODE && resultCode == Activity.RESULT_OK) {
-            Intent intentCropperImage = new Intent(crear_producto.this, crop_image.class);
+            Intent intentCropperImage = new Intent(CrearProducto.this, crop_image.class);
             intentCropperImage.putExtra("from", this.getClass().getName());
             intentCropperImage.setData(image_uri);
             startActivity(intentCropperImage);
@@ -186,27 +107,12 @@ public class crear_producto extends AppCompatActivity {
             finish();
         }
         if (requestCode == PICK_IMAGE && resultCode == Activity.RESULT_OK) {
-            Intent intentCropperImage = new Intent(crear_producto.this, crop_image.class);
+            Intent intentCropperImage = new Intent(CrearProducto.this, crop_image.class);
             intentCropperImage.putExtra("from", this.getClass().getName());
             intentCropperImage.setData(data.getData());
             startActivity(intentCropperImage);
             finish();
         }
-    }
-
-    public void generar_producto(View view) {
-
-        nombreProducto = String.valueOf(textInputLayoutNombreProducto.getEditText().getText());
-        precioProductoOferta = String.valueOf(textInputLayoutPrecioProducto.getEditText().getText());
-
-        enviarDatos("0");
-
-
-/*
-        Intent intentInicio = new Intent(crear_producto.this, config_inicio.class);
-        startActivity(intentInicio);
-
-        finish();*/
     }
 
     public void enviarDatos(String actividad) {
@@ -226,7 +132,7 @@ public class crear_producto extends AppCompatActivity {
 
                 new SubidaFoto("").execute(); // Загружаю фото на сервер
 
-                Intent intentInicio = new Intent(crear_producto.this, config_inicio.class);
+                Intent intentInicio = new Intent(CrearProducto.this, config_inicio.class);
                 startActivity(intentInicio);
                 finish();
             }
@@ -235,13 +141,6 @@ public class crear_producto extends AppCompatActivity {
             public void onFailure(Call<List<Retrofit2>> call, Throwable t) {
             }
         });
-    }
-
-    public void categorias_producto(View view) {
-        Intent intentInicio = new Intent(crear_producto.this, SeleccionarCategoriaProducto.class);
-        startActivity(intentInicio);
-
-        finish();
     }
 
     public void changeServiceOptions(View view) {
@@ -269,11 +168,83 @@ public class crear_producto extends AppCompatActivity {
         }
     }
 
-    public void vistaPrevia(View view) {
-        Intent intentInicio = new Intent(crear_producto.this, VistaPreviaComponente.class);
+    public void Galeria(View view) {
+        Intent galeryIntent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+        galeryIntent.setType("image/*");
+        startActivityForResult(galeryIntent, PICK_IMAGE);
+    }
+
+    public void Foto(View view) {
+        if (checkSelfPermission(Manifest.permission.CAMERA)
+                != PackageManager.PERMISSION_GRANTED || checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    MY_CAMERA_REQUEST_CODE);
+        } else {
+            dispatchTakePictureIntent();
+        }
+    }
+
+    public void Recursos(View view) {
+        Intent intentInicio = new Intent(CrearProducto.this, select_icon.class);
         startActivity(intentInicio);
 
         finish();
+    }
+
+    public void VistaPrevia(View view) {
+        Intent intentInicio = new Intent(CrearProducto.this, VistaPreviaComponente.class);
+        startActivity(intentInicio);
+
+        finish();
+    }
+
+    public void Categorias(View view) {
+        Intent intentInicio = new Intent(CrearProducto.this, SeleccionarCategoriaProducto.class);
+        startActivity(intentInicio);
+        finish();
+    }
+
+    public void Intolerancias(View view) {
+        Intent intentInicio = new Intent(CrearProducto.this, select_intolerancia.class);
+        Intent previousIntent = getIntent();
+        Bundle extras = previousIntent.getExtras();
+        if (extras != null) {
+            if (extras.containsKey("selectedIntolerances")) {
+                intentInicio.putExtra("selectedIntolerances", previousIntent.getIntArrayExtra("selectedIntolerances"));
+            }
+        }
+        startActivity(intentInicio);
+
+        finish();
+    }
+
+    public void IngredientesSeleccionables(View view) {
+        Intent intentInicio = new Intent(CrearProducto.this, ingrediente_seleccionable.class);
+        startActivity(intentInicio);
+
+        finish();
+    }
+
+    public void IngredienteAnadible(View view) {
+        Intent intentInicio = new Intent(CrearProducto.this, ingrediente_anadibles.class);
+        startActivity(intentInicio);
+
+        finish();
+    }
+
+    public void IngredienteRetirable(View view) {
+        Intent intentInicio = new Intent(CrearProducto.this, ingrediente_retirable.class);
+        startActivity(intentInicio);
+
+        finish();
+    }
+
+    public void CrearProducto(View view) {
+        nombreProducto = String.valueOf(textInputLayoutNombreProducto.getEditText().getText());
+        precioProductoOferta = String.valueOf(textInputLayoutPrecioProducto.getEditText().getText());
+
+        enviarDatos("0");
     }
 
     public void Atras(View view) {

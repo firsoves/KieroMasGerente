@@ -31,7 +31,7 @@ public class lista_categorias extends AppCompatActivity {
     }
 
     public void confirmar(View view) {
-        Intent intentInicio = new Intent(lista_categorias.this, crear_producto.class);
+        Intent intentInicio = new Intent(lista_categorias.this, CrearProducto.class);
         startActivity(intentInicio);
 
         finish();

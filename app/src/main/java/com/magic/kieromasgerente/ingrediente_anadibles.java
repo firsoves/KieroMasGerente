@@ -30,7 +30,7 @@ public class ingrediente_anadibles extends AppCompatActivity {
     }
 
     public void confirmar_cambios(View view) {
-        Intent intentInicio = new Intent(ingrediente_anadibles.this, crear_producto.class);
+        Intent intentInicio = new Intent(ingrediente_anadibles.this, CrearProducto.class);
         startActivity(intentInicio);
 
         finish();

@@ -37,7 +37,7 @@ public class config_inicio extends AppCompatActivity {
     }
 
     public void Crear_Producto(View view) {
-        Intent intentInicio = new Intent(config_inicio.this, crear_producto.class);
+        Intent intentInicio = new Intent(config_inicio.this, CrearProducto.class);
         startActivity(intentInicio);
 
         finish();
